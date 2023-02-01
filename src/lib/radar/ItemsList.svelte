@@ -27,7 +27,7 @@
         {/if}
         <li class="hover:bg-accent-focus/50 pr-1 pl-1 rounded-sm"
             style="text-decoration: {item.index === ($selected?.index || -1) ? 'underline' : 'none'}">
-            <a on:click={onSelect(item)} class="cursor-pointer" href={'#'}>
+            <a on:click={onSelect(item)} class="cursor-pointer" href={'#'} tabIndex="-1">
                 {#if orientation === "right"}{item.name}&nbsp;-&nbsp;{item.index}
                 {:else}{item.index}&nbsp;-&nbsp;{item.name}
                 {/if}
@@ -43,7 +43,7 @@
         {/if}
         <li class="hover:bg-accent-focus/50 pr-1 pl-1 rounded-sm"
             style="text-decoration: {item.index === ($selected?.index || -1) ? 'underline' : 'none'}">
-            <a on:click={onSelect(item)} class="cursor-pointer" href={'#'}>
+            <a on:click={onSelect(item)} class="cursor-pointer" href={'#'} tabIndex="-1">
                 {#if orientation === "right"}{item.name}&nbsp;-&nbsp;{item.index}
                 {:else}{item.index}&nbsp;-&nbsp;{item.name}
                 {/if}
@@ -59,7 +59,7 @@
         {/if}
         <li class="hover:bg-accent-focus/50 pr-1 pl-1 rounded-sm"
             style="text-decoration: {item.index === ($selected?.index || -1) ? 'underline' : 'none'}">
-            <a on:click={onSelect(item)} class="cursor-pointer" href={'#'}>
+            <a on:click={onSelect(item)} class="cursor-pointer" href={'#'} tabIndex="-1">
                 {#if orientation === "right"}{item.name}&nbsp;-&nbsp;{item.index}
                 {:else}{item.index}&nbsp;-&nbsp;{item.name}
                 {/if}
@@ -75,7 +75,7 @@
         {/if}
         <li class="hover:bg-accent-focus/50 pr-1 pl-1 rounded-sm"
             style="text-decoration: {item.index === ($selected?.index || -1) ? 'underline' : 'none'}">
-            <a on:click={onSelect(item)} class="cursor-pointer" href={'#'}>
+            <a on:click={onSelect(item)} class="cursor-pointer" href={'#'} tabIndex="-1">
                 {#if orientation === "right"}{item.name}&nbsp;-&nbsp;{item.index}
                 {:else}{item.index}&nbsp;-&nbsp;{item.name}
                 {/if}

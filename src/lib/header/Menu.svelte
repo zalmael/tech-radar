@@ -10,7 +10,7 @@
 </script>
 
 <div class="relative">
-    <button class="btn btn-outline text-xl" on:click={toggleOpen}>&#9776;</button>
+    <button class="btn btn-outline text-xl" on:click={toggleOpen} tabIndex="-1">&#9776;</button>
     {#if isOpen}
         <div class="absolute top-full -ml-2 p-2 pr-4 bg-base-100 border rounded flex flex-col">
             <Download/>

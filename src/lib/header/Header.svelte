@@ -15,7 +15,7 @@
             <ItemEditor></ItemEditor>
         </div>
         <div class="text-right pr-3">
-            <a href={'#'} on:click={toggleHelp}>
+            <a href={'#'} on:click={toggleHelp} tabIndex="-1">
                 <span class="border border-slate-900 w-7 h-7 rounded-full flex justify-center items-center">?</span>
             </a>
         </div>
