@@ -1,6 +1,6 @@
 <script lang="ts">
-    import {items, selected} from './store';
-    import type {Item} from "./type";
+    import {items, selected} from '../store';
+    import type {Item} from "../type";
 
     export let quarter: number;
     export let orientation = "left"

@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import {items} from "./store";
+    import {items} from "../store";
 
     let files: FileList = undefined
     let input: HTMLInputElement

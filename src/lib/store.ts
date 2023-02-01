@@ -3,8 +3,8 @@ import type {Item} from "./type";
 import {levels, quarters} from "./type";
 
 
-function listToTrapeze(list: Item[], intialLength = 1) {
-    let length = intialLength;
+function listToTrapeze(list: Item[], initialLength = 1) {
+    let length = initialLength;
     let current = [];
     const result = []
     list.forEach(value => {

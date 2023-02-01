@@ -1,8 +1,8 @@
 <script lang="ts">
-    import Radar from "./lib/Radar.svelte";
+    import Radar from "./lib/radar/Radar.svelte";
     import Help from "./lib/Help.svelte";
     import Layout from "./lib/Layout.svelte";
-    import Header from "./lib/Header.svelte";
+    import Header from "./lib/header/Header.svelte";
 
     let isHelpOpen = false
 
