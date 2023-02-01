@@ -2,7 +2,7 @@
 
     import {items} from "./store";
 
-    let files: FileList
+    let files: FileList = undefined
     let input: HTMLInputElement
 
     function upload() {
@@ -29,7 +29,11 @@
 
 </script>
 
-<button class="btn btn-outline text-xl" on:click={upload}><u>↑</u></button>
-<input type="file" class="hidden"
-       bind:this={input} bind:files
-       accept="application/json">
+<div class="whitespace-nowrap cursor-pointer pt-2 pb-2" on:click={upload} on:keydown={upload}>
+    <u>↑</u>
+    Upload
+    <input type="file" class="hidden"
+           bind:this={input} bind:files
+           accept="application/json">
+</div>
+

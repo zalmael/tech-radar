@@ -17,5 +17,8 @@
     }
 </script>
 
-<button class="btn btn-outline text-xl" on:click={download}><u>↓</u></button>
-<a bind:this={link} href={'#'} class="hidden">x</a>
+<div class="whitespace-nowrap cursor-pointer pt-2 pb-2" on:click={download} on:keydown={download}>
+    <u>↓</u>
+    Download
+    <a bind:this={link} href={'#'} class="hidden">x</a>
+</div>
