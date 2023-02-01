@@ -10,7 +10,7 @@
     <Quarter quarter={2}/>
     <Quarter quarter={3}/>
     <Quarter quarter={4}/>
-    <div class="target relative aspect-square justify-self-center h-full max-h-full" style="grid-area: target">
+    <div class="relative aspect-square justify-self-center h-full max-h-full" style="grid-area: target">
         <Target/>
         {#each $items as item}
             <Blip item={item}/>
@@ -20,7 +20,6 @@
 </div>
 
 <style>
-
     .radar {
         position: initial;
         grid-template-columns: minmax(max-content, 1fr) 3fr minmax(max-content, 1fr);
@@ -29,10 +28,4 @@
     "quarter-3 target quarter-4";
         grid-template-rows: 50% 50%;
     }
-
-    .target {
-        grid-column: 2;
-        grid-row: 1/3;
-    }
-
 </style>

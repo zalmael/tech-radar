@@ -1,6 +1,6 @@
 <script>
     import ItemsList from "./ItemsList.svelte";
-    export let quarter
+    export let quarter = 0;
 </script>
 
 <div class="text-xs ml-2 pb-2 h-full max-h-full flex justify-self-center" style="grid-area: quarter-{quarter}">
