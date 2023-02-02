@@ -24,9 +24,19 @@
         level = 1
     })
 
+    function handleKeydown(event) {
+        let key = event.key;
+
+        if (key === 'Escape' && nameInput) {
+            nameInput.focus()
+        }
+    }
+
     onMount(() => nameInput.focus())
 
 </script>
+
+<svelte:window on:keydown={handleKeydown}/>
 
 <form on:submit|preventDefault={submit}>
     <input type="text"

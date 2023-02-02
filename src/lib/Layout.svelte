@@ -1,5 +1,5 @@
 <div class="w-screen h-screen max-h-screen pb-8">
-    <div class="grid grid-rows-[auto_min-content_1fr] h-full justify-center">
+    <div class="grid grid-rows-[auto_min-content_1fr_min-content_min-content] h-full w-full">
         <div>
             <slot name="header"></slot>
         </div>
@@ -8,7 +8,7 @@
             <slot name="radar"></slot>
         </div>
         <div class="divider"></div>
-        <div class="justify-self-center">
+        <div>
             <slot name="search"/>
         </div>
     </div>

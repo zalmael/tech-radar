@@ -14,7 +14,6 @@
         if (item.level > 1) {
             return item.y + item.level;
         }
-
         return 2 * item.y
     }
 
