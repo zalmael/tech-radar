@@ -1,7 +1,6 @@
+import {levels, quarters} from "../type";
+import type {Item} from "../type"
 import {writable} from "svelte/store";
-import type {Item} from "./type";
-import {levels, quarters} from "./type";
-
 
 function listToTrapeze(list: Item[], initialLength = 1) {
     let length = initialLength;
@@ -55,40 +54,26 @@ function persist(list: Item[]) {
 function create() {
 
     const {subscribe, update, set} = writable(JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '[]') as Item[]);
-    const index = writable(0)
-    const selected = writable(null as Item)
     subscribe((list: Item[]) => {
         generatePoints(list)
         persist(list)
-        index.update(() => {
-            const last = list.reduce((previousValue, currentValue) => Math.max(previousValue, currentValue.index), 0)
-            return last + 1;
-        })
     })
     return {
-        selected,
-        index,
-        items: {
-            subscribe,
-            set,
-            add: (item: Item) => {
-                update((list: Item[]) => {
-                    if (list.some(value => value.name.toUpperCase() === item.name.toUpperCase() &&
-                        value.level === item.level && value.quarter === item.quarter)) {
-                        return list
-                    }
-                    return [...list, {...item}]
-                })
-            },
-            remove: (item: Item) => {
-                update((list) => list.filter(v => v.index !== item.index))
-            }
+        subscribe,
+        set,
+        add: (item: Item) => {
+            update((list: Item[]) => {
+                if (list.some(value => value.name.toUpperCase() === item.name.toUpperCase() &&
+                    value.level === item.level && value.quarter === item.quarter)) {
+                    return list
+                }
+                return [...list, {...item}]
+            })
+        },
+        remove: (item: Item) => {
+            update((list) => list.filter(v => v.index !== item.index))
         }
     };
 }
 
-const stores = create();
-
-export const items = stores.items;
-export const index = stores.index;
-export const selected = stores.selected
+export const items = create();

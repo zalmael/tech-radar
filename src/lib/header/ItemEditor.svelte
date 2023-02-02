@@ -1,6 +1,6 @@
 <script lang="ts">
     import type {Quarter, Level} from "../type";
-    import {items, index} from '../store';
+    import {items, index} from '../stores';
     import { onMount } from 'svelte'
 
     const defaultItem = {x: 0, y: 0, quarter: 1, level: 1}

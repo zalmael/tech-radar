@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {items, selected} from '../store';
+    import {items, selected} from '../stores';
     import type {Item} from "../type";
     import ItemElement from "./ItemElement.svelte";
 

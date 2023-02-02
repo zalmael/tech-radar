@@ -1,6 +1,6 @@
 <script lang="ts">
     import type {Item} from "../type";
-    import {selected} from "../store";
+    import {selected} from "../stores";
 
     export let item: Item
 

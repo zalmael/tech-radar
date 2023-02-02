@@ -3,6 +3,7 @@
     import Help from "./lib/Help.svelte";
     import Layout from "./lib/Layout.svelte";
     import Header from "./lib/header/Header.svelte";
+    import Search from "./lib/Search.svelte";
 
     let isHelpOpen = false
 
@@ -15,6 +16,7 @@
     <Layout>
         <Header slot="header" toggleHelp={toggleHelp}></Header>
         <Radar slot="radar"></Radar>
+        <Search slot="search"/>
     </Layout>
     {#if isHelpOpen}
         <div class="absolute flex h-screen top-0 left-0">

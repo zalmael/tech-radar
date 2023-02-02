@@ -1,8 +1,8 @@
 <script lang="ts">
-    import {items} from '../store';
     import Target from "./Target.svelte";
     import Blip from "./Blip.svelte";
     import Quarter from "./Quarter.svelte";
+    import {filtered} from "../stores";
 </script>
 
 <div class="radar grid h-full">
@@ -12,7 +12,7 @@
     <Quarter quarter={4}/>
     <div class="relative aspect-square justify-self-center h-full max-h-full" style="grid-area: target">
         <Target/>
-        {#each $items as item}
+        {#each $filtered as item}
             <Blip item={item}/>
         {/each}
     </div>
