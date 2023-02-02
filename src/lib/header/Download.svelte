@@ -5,6 +5,7 @@
     let link: HTMLAnchorElement
 
     function download() {
+
         let str = JSON.stringify($items);
         const file = new File([str], 'tech-radar.json', {
             type: 'application/json',
@@ -17,8 +18,8 @@
     }
 </script>
 
-<div class="whitespace-nowrap cursor-pointer pt-2 pb-2" on:click={download} on:keydown={download}>
+<div class="whitespace-nowrap cursor-pointer pt-2 pb-2" on:click={download} >
     <u>↓</u>
     Download
-    <a bind:this={link} href={'#'} class="hidden">x</a>
 </div>
+<a bind:this={link} href={'#'} class="hidden">x</a>

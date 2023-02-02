@@ -21,8 +21,10 @@
             }
         }
         // reset input element
-        input.type = ''
-        input.type = 'file'
+        if (input) {
+            input.type = ''
+            input.type = 'file'
+        }
     }
 
     $: loadFromFile(files)
