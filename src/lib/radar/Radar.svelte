@@ -10,7 +10,7 @@
     <Quarter quarter={2}/>
     <Quarter quarter={3}/>
     <Quarter quarter={4}/>
-    <div class="relative aspect-square justify-self-center h-full max-h-full" style="grid-area: target">
+    <div class="relative aspect-square justify-self-center landscape:h-full landscape:max-h-full portrait:w-full portrait:max-w-full" style="grid-area: target">
         <Target/>
         {#each $filtered as item}
             <Blip item={item}/>
