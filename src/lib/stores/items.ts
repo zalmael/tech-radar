@@ -62,6 +62,7 @@ function create() {
         subscribe,
         set,
         add: (item: Item) => {
+            console.log("add")
             update((list: Item[]) => {
                 if (list.some(value => value.name.toUpperCase() === item.name.toUpperCase() &&
                     value.level === item.level && value.quarter === item.quarter)) {
@@ -70,8 +71,19 @@ function create() {
                 return [...list, {...item}]
             })
         },
-        remove: (item: Item) => {
-            update((list) => list.filter(v => v.index !== item.index))
+        update: (item: Item) => {
+            console.log("update", item)
+            update((list: Item[]) => {
+                const filtered = list.filter(v => v.index !== item.index)
+                if (filtered.some(value => value.name.toUpperCase() === item.name.toUpperCase() &&
+                    value.level === item.level && value.quarter === item.quarter)) {
+                    return filtered
+                }
+                return [...filtered, {...item}]
+            })
+        },
+        remove: (id: number) => {
+            update((list) => list.filter(v => v.index !== id))
         }
     };
 }
