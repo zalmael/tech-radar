@@ -5,7 +5,7 @@
     import {filtered} from "../stores";
 </script>
 
-<div class="radar grid h-full">
+<div class="radar grid h-full justify-start">
     <Quarter quarter={1}/>
     <Quarter quarter={2}/>
     <Quarter quarter={3}/>
@@ -16,7 +16,6 @@
             <Blip item={item}/>
         {/each}
     </div>
-
 </div>
 
 <style>
