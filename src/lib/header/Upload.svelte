@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import {items} from "../stores";
-    import {parse} from "../utils/json_parser";
+    import {readArchive} from "../model";
 
     let files: FileList = undefined
     let input: HTMLInputElement
@@ -16,7 +16,7 @@
             // https://developer.mozilla.org/en-US/docs/Web/API/FileList
             for (const file of fileList) {
                 const text = await file.text()
-                const archive = parse(text)
+                const archive = readArchive(text)
                 if (archive) {
                     items.set(archive.items)
                 }
