@@ -11,7 +11,7 @@
 </script>
 
 <div class="relative">
-    <button class="btn btn-outline text-2xl" on:click={toggleOpen} tabIndex="-1">
+    <button class="btn btn-outline text-2xl" on:click={toggleOpen} on:click={document.body.addEventListener('click', isOpen=false)} tabIndex="-1">
         <MenuIcon alt="Application menu"/>
     </button>
     {#if isOpen}
